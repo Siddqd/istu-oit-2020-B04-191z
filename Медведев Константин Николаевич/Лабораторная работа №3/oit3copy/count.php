@@ -1,6 +1,6 @@
 <?php
 include 'connect.php';
-$visitor_ip = $_SERVER['REMMOTE_ADDR'];
+$visitor_ip = $_SERVER['REMOTE_ADDR'];
 $date = date("d-m-y");
 echo "$date";
 
