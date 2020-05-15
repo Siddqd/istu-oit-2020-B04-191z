@@ -22,7 +22,7 @@
             <section id="first">
             <?php
                 include 'connect.php';
-                $id = $_GET['id'];
+                $id = mysqli_real_escape_string($connect,$_GET['id']);
                 
 
                 $query_str = "SELECT * FROM recipients WHERE id = '$id'";
@@ -45,7 +45,7 @@
                 <ul>
                     <?php
                         include 'connect.php';
-                        $id = $_GET['id'];
+                       $id = mysqli_real_escape_string($connect,$_GET['id']);
 
                         $query_str = "SELECT product FROM ing WHERE id = '$id'";
                         $query_run = mysqli_query($connect,$query_str);
