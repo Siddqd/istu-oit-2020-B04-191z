@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Фоторедактор</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/font-sizes.css">
+    <link rel="stylesheet" href="./css/font-styles.css">
+    <link rel="stylesheet" href="./css/block-styles.css">
+</head>
+
+<body id="dropZone" class="body text-Quarion text-20px-000">
+
+    <!--Фоторедактор-->
+    <div class="editior-content">
+        <h1 class="header" align="center">Фоторедактор</h1>
+        <form class="form flex-center">
+            <div class="file flex-center padding-20px">
+                Выберете файл (допустимые форматы .jpeg и .png):
+                <input class="input-file" type="file" accept=".jpeg,.png">
+                <button class="file__select-file text-Quarion text-17px-374957" id="replacement"><img class="upload-icon" src="./images/upload.svg">Открыть файл</button>
+            </div>
+            <div class="width flex-center padding-20px">
+                Введите ширину картинки:
+                <input class="width__select-width input-number text-Quarion" type="number" min="1" required>
+            </div>
+            <div class="height flex-center padding-20px">
+                Введите высоту картинки:
+                <input class="height__select-height input-number text-Quarion" type="number" min="1" required>
+            </div>
+            <div class="filter flex-center padding-20px">
+                <div class="filter__heading">
+                    Выберете фильтр:
+                </div>
+                <div class="filter__select-filter-content">
+                    <select class="filter__select-filter filter__select-filter_theme1 text-Quarion text-18px-000">
+                        <option value="1">Перевод в черно-белое</option>
+                        <option value="2">Отразить по вертикали</option>
+                        <option value="3">Отразить по горизонтали</option>
+                        <option value="4">Повернуть на 90 градусов влево</option>
+                        <option value="5">Повернуть на 90 градусов вправо</option>
+                        <option value="6">Бинаризация по порогу </option>
+                    </select>
+                    <button type="button" class="filter__delete-filter filter__delete-filter_theme1 text-Quarion text-16px-fff">Удалить фильтр</button>
+                    <input class="filter__threshold input-number text-Quarion" type="number" placeholder="Введите значение параметра">
+                </div>
+                <button type="button" class="filter__add-filter filter__add-filter_theme1 text-Quarion text-16px-fff">Добавить фильтр</button>
+            </div>
+            <button type="button" class="button-send button-send_theme1 text-Quarion text-20px-fff">Отправить</button>
+        </form>
+    </div>
+
+    <!--Результат-->
+    <div class="result flex-center">
+        <h1 class="result__heading1">
+            Результат редактирования
+        </h1>
+        <div class="result__heading1 text-30px-000">
+            Исходное изображение:
+        </div>
+        <img class="result__start-img" src="">
+        <div class="result__heading2 text-30px-000">
+            Отредактированное изображение:
+        </div>
+        <canvas id="canvas" class="result__result-img" width="" height=""></canvas>
+        <a class="result__link result__link_theme1 text-Quarion text-20px-fff" href="" download>Скачать</a>
+        <a class="back__link" href="./Фоторедактор.html"></a>
+    </div>
+
+    <!--Подключение JQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--Подключение плагина JQuery для стилизации формы выбора файла-->
+    <script type="text/javascript" src="./js/jquery.fileinput.min.js"></script>
+    <script type="text/javascript">
+        $().ready(function() {
+            $("input[type=file]").fileinput($("#replacement").remove());
+        });
+    </script>
+    <!--Подключение внутренней логики страницы-->
+    <script src="./js/add-filter-button.js"></script>
+    <script src="./js/photo-editor.js"></script>
+    <script src="./js/drag-drop.js"></script>
+    <script src="./js/reload.js"></script>
+
+</body>
+
+</html>
