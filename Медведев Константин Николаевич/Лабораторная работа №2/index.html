@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ОИТ2</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form>
+    <div class="content_wrapper">
+        <div id="form">
+            <div class="input_field">
+                <div class="input_title">
+                    <label for="file_input">Выберите файл</label>
+                </div>
+                <input id="file_input" type="file" name="file" required>
+            </div>
+            <div class="input_field">
+                <div class="input_title">
+                    <label for="img_width">Требуемая ширина</label>
+                </div>
+                <input id="img_width" type="number" name="img_width" required>
+            </div>
+            <div class="input_field">
+                <div class="input_title">
+                    <label for="img_height">Требуемая высота</label>
+                </div>
+                <input id="img_height" type="number" name="img_height">
+            </div>
+            <div class="input_field">
+                <div class="input_title">
+                    <label for="filters">Фильтры</label>
+                </div>
+                <select id="filters" name="filters">
+                    <option></option>
+                    <option id="bw">Перевод в черно-белое</option>
+                    <option id="vertical">Отразить по вертикали</option>
+                    <option id="horizontal">Отразить по горизонтали</option>
+                    <option id="rotateToLeft">Повернуть на 90 градусов влево</option>
+                    <option id="rotateToRight">Повернуть на 90 градусов вправо</option>
+                    <option id="binary">Бинаризация по порогу</option>
+                </select>
+                <div id="active_filters"></div>
+            </div>
+
+            <button type="button" onclick="validateAndSave();">Обработать</button>
+        </div>
+        <div id="drag_and_drop_area">
+            <span>DROP FILE HERE</span>
+        </div>
+        <canvas id="canvas_area"></canvas>
+    </div>
+</form>
+
+<script src="main.js"></script>
+</body>
+</html>
