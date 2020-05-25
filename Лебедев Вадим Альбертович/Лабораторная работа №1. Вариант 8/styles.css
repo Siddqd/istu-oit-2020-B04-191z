@@ -1,0 +1,130 @@
+body
+{
+    padding: 0;
+    margin: 0;
+}
+#Header
+{
+    background-image: linear-gradient(to bottom, pink, white);
+    min-height:100px;
+    width: 100%;
+}
+nav
+{
+    background-color: white;
+}
+nav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid black;
+}
+nav li
+{
+    float: left;
+    border-right: 1px solid black;
+}
+nav li a
+{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    height: 20px;
+    padding: 6px 50px;
+}
+nav li img
+{
+    height: 20px;
+    width: 20px;
+}
+nav #Logo
+{
+padding: 6px 250px;
+}
+nav li a:hover
+{
+    background-color: #111;
+    color: white;
+}
+.header_fixed
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+#content
+{
+    text-align: center;
+    margin-left: 10%;
+    margin-top: -5.2%;
+    width: 1024px;
+    background-color: white;
+    border: 1px solid black;
+}
+#content p
+{
+    text-align: justify;
+}
+#content .textImg
+{
+    float: right;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+#content table
+{
+    margin: 10px;
+    border-collapse: collapse;
+}
+#content th, td
+{
+    margin: 10px;
+    border: 1px solid black;
+}
+
+#content ul, ol
+{
+    text-align: left;
+}
+
+#content .image
+{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+
+.popup 
+{
+	position: absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	display:none;
+	text-align:center;
+}
+
+.popup_bg 
+{
+	background:rgba(0,0,0,0.3);
+	position:fixed;
+	z-index:1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: auto;
+    height: auto;
+}
+
+footer
+{
+    text-align: center;
+    border: 1px solid black;
+}
