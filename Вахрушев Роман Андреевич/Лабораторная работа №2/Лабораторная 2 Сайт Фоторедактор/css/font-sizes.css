@@ -1,0 +1,35 @@
+/*Стили шрифтов текста*/
+
+.text-Quarion {
+    font-family: Quarion, sans-serif;
+}
+
+.text-18px-000 {
+    color: #000;
+    font-size: 18px;
+}
+
+.text-20px-000 {
+    color: #000;
+    font-size: 20px;
+}
+
+.text-30px-000 {
+    color: #000;
+    font-size: 30px;
+}
+
+.text-17px-374957 {
+    color: #374957;
+    font-size: 17px;
+}
+
+.text-16px-fff {
+    color: #fff;
+    font-size: 16px;
+}
+
+.text-20px-fff {
+    color: #fff;
+    font-size: 20px;
+}
