@@ -39,12 +39,8 @@ else
   $months=array('','января', 'февраля','марта', 'апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря');
   $date = date(' d ') . $months[(int)date('n')] . date(' Y') . date(' H:i');
 
-  // Преобразуем спецсимволы в HTML-сущности
-  $name = htmlspecialchars($name);
-  $text_comment = htmlspecialchars($text_comment);
-
   //Сохранение переноса строк
-   $text_comment=substr( nl2br(htmlspecialchars(addslashes(trim($text_comment)))) ,0,1000);
+   //$text_comment=substr(nl2br(trim($text_comment)),0,1000);
 
    //подключение к бд
    $db=mysqli_connect('localhost','root','','ecoportal'); 

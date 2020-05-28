@@ -108,6 +108,11 @@ switch($page){
               {
 
                 //Вывод комментариев $str[2] -ник, $str[4] -дата, $str[3] -текст
+                // Преобразуем спецсимволы в HTML-сущности
+                $str[2]=htmlspecialchars($str[2]); 
+                $str[3]=htmlspecialchars($str[3]); 
+                $str[3]=nl2br(trim($str[3]));
+
                 echo "
                 <div class=\"comment comment_eco-theme text-16px-000\">
                   <div class=\"comment__header comment__header_eco-theme\">
@@ -119,7 +124,7 @@ switch($page){
                   </div>
                 </div>
                   <div class=\"comment__content comment__content_eco-theme\">
-                  $str[3]
+                  $str[3] 
                   </div>
                 </div>
                 ";
