@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body, .side, .container {
+    height: 100%;
+}
+
+#content-wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.side {
+    background: orange;
+    background: linear-gradient(to bottom, orange 0%, #ffffff 9%, #ffffff 88%, orange 100%);
+}
+
+.container {
+    width: 1024px;
+    margin-top: 10vmin;
+    margin: auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas: "logo phone";
+    background: #ffeb3b;
+}
+
+#logo {
+    grid-area: logo;
+    align-self: center;
+}
+
+#logo img {
+    max-height: 10vmin;
+}
+
+#phone {
+    grid-area: phone;
+    justify-self: end;
+}
+
+nav {
+    margin-top: 5px;
+    float: right;
+}
+
+.burger {
+    display: none;
+}
+
+#toggle {
+    opacity: 0;
+}
+.burger-btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.burger-btn > span,
+.burger-btn > span::before,
+.burger-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+}
+.burger-btn > span::before {
+    content: '';
+    top: -8px;
+}
+.burger-btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.burger-box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+#toggle:checked ~ .burger-btn > span {
+    transform: rotate(45deg);
+}
+#toggle:checked ~ .burger-btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#toggle:checked ~ .burger-btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#toggle:checked ~ .burger-box {
+    visibility: visible;
+    left: 0;
+}
+
+.nav-link {
+    padding: 2vmin 6vmin;
+}
+
+.nav-link:hover {
+    background: chartreuse;
+    color: black;
+}
+
+section {
+    text-align: justify;
+    margin-top: 4vh;
+    padding-left: 3vh;
+}
+
+#first img {
+    width: 20vw;
+    float: right;
+    margin-left: 3vh;
+    margin-top: 1vh;
+    border-radius: 2vh;
+}
+
+#second img {
+    width: 25vw;
+    float: left;
+    margin-right: 3vh;
+    border-radius: 2vh;
+}
+
+section a:hover {
+    color: aquamarine;
+}
+
+p, ul, ol, table {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-top: 2vh;
+}
+
+ul, ol {
+    text-align: left;
+    margin-top: 4vh;
+}
+
+table {
+    margin: 5vh auto;
+}
+.thead{
+    text-align: center;
+}
+
+#slider {
+    height: 300px;
+    margin: 3vmin 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    z-index: -1;
+    display: none;
+}
+
+.slide.active {
+    display: block!important;
+}
+
+#slide_1 {
+    background: url(../assets/turkey.jpg) no-repeat center;
+    background-size: contain;
+}
+
+#slide_2 {
+    background: url(../assets/shtrudel.jpg) no-repeat center;
+    background-size: contain;
+    display: none;
+}
+
+#slide_3 {
+    background: url(../assets/chiken.jpg) no-repeat center;
+    background-size: contain;
+    display: none;
+}
+
+#selectors button {
+    font-size: 3rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#selectors button:focus {
+    outline: none;
+}
+
+#previous {
+    position: absolute;
+    left: 10px;
+    top: 150px;
+}
+
+#next {
+    position: absolute;
+    right: 10px;
+    top: 150px;
+}
+
+footer {
+    bottom: 0;
+    text-align: center;
+}
+
+
+@media (max-width: 1024px) {
+    #content-wrapper {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .side, #phone, nav {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    header {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "menu logo";
+        background: #ffeb3b;
+    }
+
+    #logo {
+        justify-self: center;
+    }
+
+    #logo img {
+        max-height: 20vmin;
+    }
+
+    section img {
+        float: none!important;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 12px 24px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .nav-link:hover {
+        background: chartreuse;
+        color: black;
+    }
+
+}
+
