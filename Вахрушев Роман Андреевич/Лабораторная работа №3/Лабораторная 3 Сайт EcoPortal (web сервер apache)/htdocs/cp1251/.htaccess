@@ -1,0 +1,3 @@
+DefaultLanguage ru
+AddDeafaultCharset windows-1251
+php_value default_charset "windows-1251"
