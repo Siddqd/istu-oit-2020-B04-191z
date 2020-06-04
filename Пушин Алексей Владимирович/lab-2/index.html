@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+  <head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Магазин</title>
+	  <link rel="stylesheet" href="Стили.css" type="text/css">
+    <link rel="stylesheet" href="magnific-popup.css" type="text/css">
+	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="jquery.magnific-popup.min.js"></script>
+    <script src="jquery.magnific-popup.js"></script>
+	  <script src="Script.js"></script>	
+  </head>
+  <body>
+   	<div class="tree" onclick="tree_toggle(arguments[0])">
+      <div id="root">Root</div>
+      <ul class="Container">
+        <li class="Node IsRoot ExpandOpen">
+          <div class="Expand"></div>
+          <div class="Content typeA">Телефоны</div>
+          <ul class="Container">
+            <li class="Node ExpandOpen">
+              <div class="Expand"></div>
+              <div class="Content typeA">Крутые </div>
+              <ul class="Container">
+                <li class="Node ExpandLeaf">
+                  <div class="Content typeB">Беспроводные</div>
+                  <div class="txt">Еще и с наушниками...........</div>
+                </li>
+              </ul>
+            </li>
+            <li class="Node ExpandLeaf">
+              <div class="Expand"></div>
+              <div class="Content typeA">Очень крутые</div>
+            </li>
+          </ul>
+        </li>
+        <li class="Node IsRoot ExpandOpen">
+          <div class="Expand"></div>
+          <div class="Content typeA">Мышки</div>
+          <ul class="Container">
+            <li class="Node ExpandLeaf">
+              <div class="Expand"></div>
+              <div class="Content typeB">Кошки</div>        
+              <div class="txt">Ложки это очень хорошо.</div>
+            </li>
+          </ul>
+        </li>
+        <li class="Node ExpandOpen IsRoot">
+          <div class="Expand"></div>
+          <div class="Content typeA">Item 3</div>
+          <ul class="Container">
+            <li class="Node ExpandLeaf">
+              <div class="Expand"></div>
+              <div class="Content typeA">Item 3.1</div>
+              <ul class="Container">
+                <li class="Node ExpandLeaf">
+                  <div class="Expand"></div>
+                  <div class="Content typeA">Item 3.1.1</div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <input href="#form" class="popup" onclick="PopUpShow()" type="button" id="button1" value="Добавить элемент!">
+    </div>
+    <div id="table"></div>
+    
+    <div class="hidden">  
+      <form id="form" onsubmit="add()">
+        <input name="type" onclick="razdelSelectType()" type="radio" value="Раздел" checked>Раздел<br>
+        <input name="type" onclick="razdelSelectType()" type="radio" value="Информация">Информация<br>
+        <input class="text" name="header" id="text1" type="text" size="15"  placeholder="Заголовок">
+        <input class="text" name="info" id="text2" type="text" size="35"  placeholder="Информация"
+        style="display: none">
+        <input type="submit" id="button2" value="Сохранить!">    
+      </form>    
+    </div>
+    </body>
+</html>
