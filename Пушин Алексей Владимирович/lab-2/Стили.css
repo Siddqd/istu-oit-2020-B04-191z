@@ -1,0 +1,123 @@
+.Container {
+    padding: 0;
+    margin: 0;
+}
+
+.Container li {
+        list-style-type: none;
+}
+
+.Node {
+    margin-left: 18px;
+    zoom: 1; 
+}
+
+.IsRoot {
+    margin-left: 0;
+}
+
+.Expand {
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+
+.Content {
+    margin-left:18px;
+    min-height: 18px;
+    height: 18px;
+}
+
+.ExpandOpen .Container {
+    display: block;
+}
+
+.ExpandClosed .Container {
+    display: none;
+}
+
+.ExpandOpen .Expand, .ExpandClosed .Expand {
+    cursor: pointer;
+}
+
+.ExpandLeaf .Expand {
+    cursor: auto;
+}
+ 
+.ExpandOpen .Expand {
+    background-image: url(img/minus.gif);
+}
+ 
+.ExpandClosed .Expand {
+    background-image: url(img/plus.gif);
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+.tree{
+    padding: 5px;
+    width: 300px;
+    height: 500px;
+    border: 2px #ccc solid;
+    float: left;
+}
+
+#table{
+    margin-left:330px;
+    width: 300px;
+    height: 300px;
+    border: 2px #ccc solid;
+    padding: 10px;
+}
+
+#button1{
+    width: 150px;
+    height: 30px;
+    margin: 20px;
+}
+
+.hidden{
+    display: none;    
+    position: relative;
+}
+
+form{
+    padding: 25px;
+    background: #fff;
+    width: 320px;
+    height: 140px;
+    margin: auto;
+    position: relative;
+}
+
+form .text{ 
+    padding:3px;   
+    margin: 4px 5% 6px 5% ;
+    width: 90%;
+    align-items: center;
+}
+
+form #button2{
+    position: absolute;   
+    bottom: 15px;
+    left:40%;
+    height: 20%;
+}
+
+.txt{
+    display: none;
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+
+#table div{
+    text-align: center;
+}
