@@ -1,0 +1,44 @@
+﻿@addTagHelper "BotDetect.Web.Mvc.CaptchaTagHelper, BotDetect.Web.Mvc"
+@using Microsoft.Extensions.Options;
+@inject IOptions<Lab3.Model.ReCAPTCHASettings> GR;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <header id="Header">
+        <nav id="Nav">
+            <ul>
+                <li><a href="#" id="Logo"><img src="Res\Home.jpg" alt="">Название</a></li>
+                <li><a href="#">Меню 1</a></li>
+                <li><a href="#">Меню 2</a></li>
+                <li><a href="#">Меню 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    @RenderBody()
+    <footer>
+        Copyright 2017
+    </footer>
+    <script src="~/scripts/Scripts.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=@GR.Value.ReCAPTCHA_Site_Key"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('@GR.Value.ReCAPTCHA_Site_Key', { action: 'submit' }).then(function (token) {
+                var tokEl = document.getElementById('Token');
+                if (tokEl != null)
+                {
+                    tokEl.value = token;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

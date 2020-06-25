@@ -1,0 +1,124 @@
+﻿@model IEnumerable<Lab3.Model.Comment>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper "BotDetect.Web.Mvc.CaptchaTagHelper, BotDetect.Web.Mvc"
+@{
+    ViewData["Title"] = "Страница 1";
+    Layout = "~/Views/_Master.cshtml";
+}
+
+<div id="content">
+    <h1>Заголовок страницы 1</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vitae
+        totam nobis officia natus illo deleniti
+        doloribus veniam itaque?
+        Necessitatibus consequatur ipsum est illo saepe vero possimus amet minus nulla.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae mollitia voluptatum quos cumque fuga
+        cupiditate, aperiam repellat tenetur ipsam!
+        Placeat voluptate natus modi doloremque, nesciunt dignissimos autem cumque. Dolor, atque?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vitae totam nobis officia natus illo deleniti
+        doloribus veniam itaque?
+        Necessitatibus consequatur ipsum est illo saepe vero possimus amet minus nulla.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae mollitia voluptatum quos cumque fuga
+        cupiditate, aperiam repellat tenetur ipsam!
+        Placeat voluptate natus modi doloremque, nesciunt dignissimos autem cumque. Dolor, atque?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vitae totam nobis officia natus illo deleniti
+        doloribus veniam itaque?
+        <a href="#">Necessitatibus consequatur ipsum est illo saepe vero possimus amet minus nulla.</a>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae mollitia voluptatum quos cumque fuga
+        cupiditate, aperiam repellat tenetur ipsam!
+        Placeat voluptate natus modi doloremque, nesciunt dignissimos autem cumque. Dolor, atque?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vitae totam nobis officia natus illo deleniti
+        doloribus veniam itaque?
+        Necessitatibus consequatur ipsum est illo saepe vero possimus amet minus nulla.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae mollitia voluptatum quos cumque fuga
+        cupiditate, aperiam repellat tenetur ipsam!
+        Placeat voluptate natus modi doloremque, nesciunt dignissimos autem cumque. Dolor, atque?
+    </p>
+    <table>
+        <tr>
+            <th>Колонка 1</th>
+            <th>Колонка 2</th>
+            <th>Колонка 3</th>
+        </tr>
+        <tr>
+            <td>Данные колонки 1</td>
+            <td>Данные колонки 2</td>
+            <td>Данные колонки 3</td>
+        </tr>
+        <tr>
+            <td>Данные колонки 1</td>
+            <td>Данные колонки 2</td>
+            <td>Данные колонки 3</td>
+        </tr>
+        <tr>
+            <td>Данные колонки 1</td>
+            <td>Данные колонки 2</td>
+            <td>Данные колонки 3</td>
+        </tr>
+    </table>
+    <ul>
+        <li>Microsoft</li>
+        <li>Google</li>
+        <li>Apple</li>
+        <li>IBM</li>
+    </ul>
+    <ol>
+        <li>Microsoft</li>
+        <li>Google</li>
+        <li>Apple</li>
+        <li>IBM</li>
+    </ol>
+    @Html.ActionLink("Следующая страница", "PageTwo");
+    <div>
+        @if (Model.Any())
+        {
+            <h3>Комментарии</h3>
+            foreach (var comment in Model)
+            {
+                <p>
+                    Дата: @comment.DateComment.ToString("F");
+                </p>
+                <p>
+                    Имя: @comment.Name;
+                </p>
+                <p>
+                    Сообщение: @comment.TextComment;
+                </p>
+                <hr />
+            }
+        }
+        else
+        {
+            <h3>Комментариев пока нет</h3>
+        }
+    </div>
+    <div>
+        <h3>Оставить комментарий</h3>
+        <form asp-action="Create" asp-controller="Home" method="post">
+            <input type="hidden" name="NameView" value="Index" />
+            <table style="border: none">
+                <tr>
+                    <td><p>Ваше имя:</p></td>
+                    <td><input type="text" name="Name" /><input type="hidden" name="Token" id="Token"></td>
+                </tr>
+                <tr>
+                    <td><p>Комментарий:</p></td>
+                    <td><textarea name="TextComment"></textarea></td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Отправить" /></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+
