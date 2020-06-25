@@ -1,0 +1,293 @@
+*{
+    margin: 0 px;
+    padding:: 0 px;
+}
+
+.wrappen {
+    align - items: center;
+    position: relative;
+    background - color: #98FB98;
+	width: 1024px;
+	margin: 0 auto;
+}
+
+aside{
+	width: 150px;
+	position: absolute;
+	height: 100%;
+	background: linear-gradient(0deg, # 777, #ccc);
+}
+
+.leftSideBar {
+    float: left;
+    left: 0 px;
+    border - right: 2 px solid black;
+}
+
+.rightSideBar {
+    float: right;
+    right: 0 px;
+    border - left: 2 px solid black;
+}
+
+.content {
+    height: 100 % ;
+    margin - right: 150 px;
+    margin - left: 150 px;
+}
+
+header a {
+    width: 150 px;
+    height: 150 px;
+    border - radius: 50 % ;
+}
+
+.logo {
+    width: 150 px;
+    height: 150 px;
+    border - radius: 50 % ;
+}
+
+header {
+    width: 100 % ;
+    height: 200 px;
+    border - bottom: 2 px solid black;
+    background: #00FA9A;
+}
+
+header h1{
+	padding: 10px 0px 0px 20px;
+	float: left;
+}
+
+header img{
+	margin: 25px 20px 15px;
+	right: 25px;
+	float: right;
+}
+
+main{
+	box-sizing: border-box;
+	padding: 5px;
+	height: 1500px;
+	width: 100%;
+	height: 100%;
+	text-align: justify;
+}
+
+p{
+	padding: 10px;
+}
+
+nav{
+	margin: 3px 0px 0px 3px;
+	float: left;
+}
+
+main table td{
+	border: 2px solid black;
+	padding: 5px;
+	border-radius: 7px;
+}
+
+.img1{
+	margin: 5px 10px 5px;
+	width: 300px;
+	height: 200px;
+	float: left;
+}
+
+.img2{
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-right: 8px;
+}
+
+main h2{
+	text-align: center;
+	margin: 5px;
+}
+
+footer{
+	height: 25px;
+	border-top: 2px black solid;
+	position: fixed;
+	left: calc(100% / 2 - 360px);
+	width: 720px;
+	bottom: 0;
+	text-align: center;
+	background: # FFC0CB;
+}
+
+.delivery {
+    margin: 15 px auto;
+    text - align: center;
+}
+
+table td: hover {
+    background: #786b59;
+	color: # ffe;
+}
+
+a: hover {
+    color: blue;
+}
+
+nav a {
+    text - decoration: none;
+    padding: 5 px;
+}
+
+table a: hover,
+table a: focus {
+    color: white;
+}
+
+@ - webkit - keyframes fade {
+    0 % { opacity: 0; }
+    11.11 % { opacity: 1; }
+    33.33 % { opacity: 1; }
+    44.44 % { opacity: 0; }
+    100 % { opacity: 0; }
+}
+
+@keyframes fade {
+    0 % { opacity: 0; }
+    11.11 % { opacity: 1; }
+    33.33 % { opacity: 1; }
+    44.44 % { opacity: 0; }
+    100 % { opacity: 0; }
+}
+
+.fadein {
+    position: relative;
+    width: 50 % ;
+    height: 150 px;
+    margin: 30 px auto 90 px auto;
+}
+
+.fadein img { position: absolute;width: 100 % ;left: 0;right: 0;opacity: 0; - webkit - animation - name: fade;animation - name: fade; - webkit - animation - duration: 8 s;animation - duration: 8 s; - webkit - animation - iteration - count: infinite;animation - iteration - count: infinite; }
+
+.fadein img: nth - child(1) {-webkit - animation - delay: 0 s;
+        animation - delay: 0 s; }
+
+    .fadein img: nth - child(2) {-webkit - animation - delay: 2 s;
+        animation - delay: 2 s; }
+
+    .fadein img: nth - child(3) {-webkit - animation - delay: 4 s;
+        animation - delay: 4 s; }
+
+    .fadein img: nth - child(4) {-webkit - animation - delay: 6 s;
+        animation - delay: 6 s; }
+
+# toTop {
+    width: 100 px;
+    border: 1 px solid# ccc;
+    background: #f7f7f7;
+    text - align: center;
+    padding: 5 px;
+    position: fixed;
+    bottom: 40 px;
+    right: calc(100 vw / 2 - 500 px);
+    cursor: pointer;
+    display: none;
+    color: #333;
+	font-family:verdana;
+	font-size:11px;
+}
+
+main h3{
+	width: 300px;
+}
+
+@media (max-width:1023px) {
+	.wrappen{
+		width: 100%;
+	}
+
+	.logo{
+		margin-left: calc(100vw / 2 - 75px);
+		margin-right: calc(100vw / 2 - 75px);
+		float: none;
+	}
+
+	header h1{
+		display:none;
+	}
+
+	.content{
+		height: 100%;
+		width: 100vw;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	.leftSideBar{
+		widows: 0px;
+		height: 0vh;
+		border: none;
+	}
+
+	.rightSideBar{
+		width: 0px;
+		height: 0vh;
+		border: none;
+	}
+
+	footer{
+		width: 100vw;
+		left: 0px;
+	}
+
+	nav{
+		margin: 0px 5%;
+		width: 90%;
+		text-align: center;
+		item-position: center;
+	}
+
+	table{
+		margin: 5px auto;
+		width:100%;
+	}
+
+	.img1{
+		margin: 5% 5% 5% 5%;
+		item-position: center;
+		width: 90%;
+	}
+
+	.delivery{
+		margin: 30px 10% auto 10%;
+	}
+
+	table.delivery thead {
+		display: none;
+		width: 80%;
+	}
+
+	table.delivery tr {
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	table.delivery td {
+		display: block;
+		width: 80%;
+		text-align: right;
+	}
+
+	table.delivery td:before {
+		content: attr(aria-label);
+		float: left;
+		font-weight: bold;
+	}
+
+	# toTop {
+        right: 10 vw;
+    }
+    .fadein {
+        height: 13 vh;
+    }
+}
