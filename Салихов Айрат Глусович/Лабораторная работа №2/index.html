@@ -1,0 +1,120 @@
+<html>
+  <head>
+  <title></title>
+  
+  <script type="text/javascript"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main" style="display: flex;" >
+<div class="container1">
+
+	<ul>
+		<li><button data-toggle-id="hhh">Заголовок первого уровня</button></li>
+		<li><button data-toggle-id="hh">Заголовок второго уровня</button></li>
+		<li><button data-toggle-id="text">Текст</button></li>
+		<li><button data-toggle-id="img">Изображение</button></li>
+	</ul>
+</div>
+
+
+<div class="container2">
+	<ul>
+		
+	<li><form id="hhh" hidden>
+		<input id="input_hhh" type="text" placeholder="Введите заголовок 1 уровня">
+	</form></li>
+	<li><form id="hh" hidden>
+		<input id="input_hh" type="text" placeholder="Введите заголовок 2 уровня">
+	</form></li>
+	<li><form id="text" hidden>
+		<textarea id="input_text" placeholder="Введите текст"></textarea>
+	</form></li>
+	<li><form id="img" hidden>
+		<input id="input_img" type="text" placeholder="Введите ссылку на изображение" >
+	</form></li>
+	    <input type="button" id="btn1" value="Вывести на печать"/>
+	    <input type="button" id="btn2" value="Очистить"/>
+
+		
+	</ul>
+</div>
+</div>
+
+<div class="container3">
+	
+	<h1></h1>
+	<h2></h2>
+	<p style="white-space: pre-wrap;"></p>
+	<img id="imgHidden" src=""  style="height: 50%;margin-left: 10px;display: none;">
+	
+</div>
+
+</body>
+	
+	<script>
+	 document.addEventListener('click', function(event) {
+    	let id = event.target.dataset.toggleId;
+    	if (!id) return;
+
+    	let elem = document.getElementById(id);
+
+    	elem.hidden = !elem.hidden;
+  	});
+
+	function splitString(stringToSplit, separator) {
+  		return stringToSplit.split(separator);
+  	}
+
+  	document.getElementById("btn2").onclick = function claer(){
+  		
+		document.getElementById("input_hhh").value = null;
+		document.getElementById("input_hh").value = null;
+		document.getElementById("input_text").value = null;
+		document.getElementById("input_img").value = null;
+
+		document.querySelector('h1').textContent = "";
+		document.querySelector('h2').textContent = "";
+		document.querySelector('p').textContent = "";
+		document.querySelector('img').src = "";
+		document.getElementById('imgHidden').style.display = "none";
+  	}
+
+	document.getElementById("btn1").onclick = function print(){
+
+		var paramhhh = document.getElementById("input_hhh").value;
+		var paramhh = document.getElementById("input_hh").value;
+		var paramtext = document.getElementById("input_text").value;
+		var paramimg = document.getElementById("input_img").value;
+		
+		var param1 = document.querySelector('h1');
+		var param2 = document.querySelector('h2');
+		var param3 = document.querySelector('p');
+
+		
+		if (paramhhh != null) {
+			param1.textContent = paramhhh;
+		}
+		if (paramhh != null) {
+			param2.textContent = paramhh;
+		}		
+		if (paramtext != null) {
+			param3.textContent = paramtext;
+		}
+		if (paramimg != null) {
+			document.querySelector('img').src = paramimg;
+			document.getElementById('imgHidden').style.display = "block";
+		}
+		if (paramimg === "") {
+			document.getElementById('imgHidden').style.display = "none";
+		}
+		
+	}
+
+
+
+	</script>
+
+</html>
