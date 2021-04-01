@@ -1,0 +1,85 @@
+.container{
+	padding: 10px;
+	border: 2px solid fuchsia;
+	text-align: center;
+	background: #d2f2ac;
+	min-height: 2000px;
+}
+
+.columns{
+	padding: 5px;
+	margin: 3px;
+	display: inline-flex;
+	top: 0px;
+	border: 2px solid black;
+	background: orange;
+	min-height: 300px;
+	width: 200px;
+}
+
+.inner_colum{
+	width: inherit;
+	margin: 0 0 0 0;
+}
+
+.head{
+	background: olive;
+	border: 0px solid green;
+	margin-bottom: 2px;
+	width: inherit;
+	margin-top: 3px;
+	padding-bottom: 3px;
+	margin-left: 0px;
+	padding-top: 4px;
+}
+
+.colum{
+	height: 85%;
+	position: relative;
+}
+
+
+
+.item{
+	padding-bottom: 7px;
+	padding-top: 3px;
+	background: yellow;
+	margin-top: 3px;
+	display: flex;
+	min-width: 195px;
+}
+
+.del_item{
+	float:right;
+	margin-right: 3px;
+}
+
+.del{
+	float:right;
+}
+
+.bottom{
+	position: absolute;
+	bottom: 0;
+	right: auto;
+	left: auto;
+	width: -moz-available;
+}
+
+.schedule{
+    width: 85%;
+    float: inherit;
+    width: 85%;
+	cursor: pointer;
+}
+
+button{
+	outline: none;
+	background-color: orange;
+	color: black;
+	cursor: pointer;
+	border-radius: 7px;
+	font-size: 12pt;
+	border: 1px solid;
+}
+	
