@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<title>mysite</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="jscrpt.js"></script>
+</head>
+<body>
+	<div class="general_cont">
+
+		<header class="header">
+			<section class="telefon">
+				Телефон: 89XXXXXXXXX
+			</section>
+			<a class="site-caption" href="index">
+				<img src="horns.png" class="site-caption-logo" 
+				title="Переместиться на главную">
+			</a>
+		</header>
+		
+		<nav class="menu_container">
+			<center>
+				<section><a href="index2">Рога</a></section>
+				<section><a href="index3">Копыта</a></section>
+				<section><a href="index4.html">Приём</a></section>
+			</center>
+		</nav>
+		<img 
+			src="picture.png" 
+			alt="picture" 
+			id="img_left">		
+		<h1>Фирма: Рога и копытца</h1>
+		<p>Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text 
+		<a href="index2">РогаРогаРога</a> Text 
+		Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		<i>Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		<a href="index3">КопытаКопыта</a>Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text</i>
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		</p>
+		
+		<p style="text-align: justify; margin: 10px; font-size: 14pt">
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text<img src="cows.png"
+		alt="picture" id="img_left"> Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		<b>Text Text Text Text<a href="index4.html">ПриёмПриём</a> Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text 
+		Text Text Text Text Text</B>
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		</p>
+		<p>Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		<s>Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text</s>
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		</p>
+		<ol type="1">
+			<li>Рожки</li>
+			<li>Копытца</li>
+			<li>Рога и копыта</li>
+		</ol>
+		<ul type="circle">
+			<li>Копыта</li>
+			<li>Рога</li>
+			<li>И то и другое</li>
+		</ul>
+		<center>
+		<table style="border: 1px;
+		font-size: 18pt;
+		text-align: center;
+		padding: 4px;
+		border:
+		2px solid black;
+		margin-bottom: 10px">
+			<caption>Приём рогов и копыт по кварталам</caption>
+			<tr>
+				<td>Квартал</td>
+				<td>Приём рогов</td>
+				<td>Приём копыт</td>
+				<td>Приём сумма</td>
+			</tr>
+			<tr><td>1</td><td>1000кг</td><td>2000кг</td><td>3000кг</td></tr>
+			<tr><td>2</td><td>500кг</td><td>700кг</td><td>1200кг</td></tr>
+			<tr><td>3</td><td>1200кг</td><td>1000кг</td><td>2200кг</td></tr>
+			<tr><td>4</td><td>800кг</td><td>700кг</td><td>1500кг</td></tr>
+		</table>
+		</center>
+		<button onclick="topFunction()" id="myBtn" 
+		title="Переместиться наверх страницы">Наверх</button>
+		<footer>
+			<center><h2>Copiright 2021</h2></center>
+		</footer>
+	</div>
+</body>
+</html>

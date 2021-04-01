@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<title>mysite_horns</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="jscrpt.js"></script>
+</head>
+<body>
+	<section class="general_cont">
+
+		<header class="header">
+			<section class="telefon">
+				Телефон: 89XXXXXXXXX
+			</section>
+			<a class="site-caption" href="index">
+				<img src="horns.png" class="site-caption-logo" title="Переместиться на главную">
+			</a>
+		</header>
+		
+		
+		<img 
+			src="helmet.png" 
+			alt="picture" 
+			id="img_left">		
+		<h1>Рога</h1>
+		<p>Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		<i>Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text</i>
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		</p>
+		
+		<p style="text-align: justify; margin: 10px; font-size: 14pt">
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text<img src="cows.png"
+		alt="picture" id="img_left"> Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		<b>Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text 
+		Text Text Text Text Text</B>
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		</p>
+		<p>Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		<s>Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text</s>
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		Text Text Text Text Text Text Text Text
+		</p>
+		<button onclick="topFunction()" id="myBtn" title="Переместиться наверх страницы">Наверх</button>
+		<footer>
+			<center><h2>Copiright 2021</h2></center>
+		</footer>
+	</section>
+</body>
+</html>
