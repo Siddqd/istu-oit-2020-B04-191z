@@ -313,5 +313,4 @@ function restoreSession() {
     document.querySelector(".task-board").innerHTML = storedItem;
   }
 }
-
 /*********************************************************************************/
