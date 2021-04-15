@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <title>Kanban</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="jscrpt.js"></script>
+</head>
+<body>
+	<section class="container" onDOMContentLoaded=>
+	
+		<section class="columns">
+			<section class="inner_colum">
+				<h3 class="head">Новые задачи
+					<button class="del_item" onmousedown="handler(event)" title="Удалить колонку" >X</button>
+				</h3>
+				<section class="colum">	
+					<section class="list" >
+						<div class="item">
+							<div class="schedule" onmousedown="handler(event)" title="Можно перетащить">Сделать лабу №2</div>
+							<button class="del" onmousedown="handler(event)" title="Удалить запись">X</button>
+						</div>
+					</section>
+					<section class="bottom">
+						<center>
+							<button class="add_item" onmousedown="handler(event)" title="Создать новую запись" >Создать</button>
+						</center>
+					</section>
+				</section>
+			</section>
+		</section>	
+		<section class="columns">	
+			<section class="inner_colum">
+				<h3 class="head">В работе
+					<button class="del_item" onmousedown="handler(event)" title="Удалить колонку" >X</button>
+				</h3>
+				<section class="colum">	
+					<section class="list" >
+						<div class="item">
+							<div class="schedule" onmousedown="handler(event)" title="Можно перетащить">Изучить JS</div>
+							<button class="del" onmousedown="handler(event)" title="Удалить запись">X</button>
+						</div>
+					</section>
+					<section class="bottom">
+						<center>
+							<button class="add_item" onmousedown="handler(event)" title="Создать новую запись" >Создать</button>
+						</center>
+					</section>
+				</section>
+			</section>
+		</section>	
+		<section class="columns">	
+			<section class="inner_colum">
+				<h3 class="head">Завершены
+					<button class="del_item" onmousedown="handler(event)" title="Удалить колонку" >X</button>
+				</h3>
+				<section class="colum">	
+					<section class="list" >
+						<div class="item">
+							<div class="schedule" onmousedown="handler(event)" title="Можно перетащить">Сделать лабораторную №1</div>
+							<button class="del" onmousedown="handler(event)" title="Удалить запись">X</button>
+						</div>
+					</section>
+					<section class="list" >
+						<div class="item">
+							<div class="schedule" onmousedown="handler(event)" title="Можно перетащить">Изучить HTML</div>
+							<button class="del" onmousedown="handler(event)" title="Удалить запись">X</button>
+						</div>
+					</section>
+					<section class="bottom">
+						<center>
+							<button class="add_item" onmousedown="handler(event)" title="Создать новую запись" >Создать</button>
+						</center>
+					</section>
+				</section>
+			</section>			
+		</section>		
+		
+		<button onclick="createNew(event)" id="myBtn" title="Создать новаую колонку">Добавить</button>
+		
+	</section>
+</body>
+</html>
