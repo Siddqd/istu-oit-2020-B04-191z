@@ -10,44 +10,25 @@
 
 <div class="main" style="display: flex;" >
 <div class="container1">
-
-	<ul>
-		<li><button data-toggle-id="hhh">Заголовок первого уровня</button></li>
-		<li><button data-toggle-id="hh">Заголовок второго уровня</button></li>
-		<li><button data-toggle-id="text">Текст</button></li>
-		<li><button data-toggle-id="img">Изображение</button></li>
-	</ul>
+	<select  id="selectBox" onchange="changeFunc();">
+		<option  value="">Добавить элемент</option>
+		<option  value="1">Заголовок первого уровня</option>
+		<option value="2">Заголовок второго уровня</option>
+		<option value="3">Текст</option>
+		<option value="4">Изображение</option>
+	</select>
 </div>
 
 
-<div class="container2">
-	<ul>
-		
-	<li><form id="hhh" hidden>
-		<input id="input_hhh" type="text" placeholder="Введите заголовок 1 уровня">
-	</form></li>
-	<li><form id="hh" hidden>
-		<input id="input_hh" type="text" placeholder="Введите заголовок 2 уровня">
-	</form></li>
-	<li><form id="text" hidden>
-		<textarea id="input_text" placeholder="Введите текст"></textarea>
-	</form></li>
-	<li><form id="img" hidden>
-		<input id="input_img" type="text" placeholder="Введите ссылку на изображение" >
-	</form></li>
-	    <input type="button" id="btn1" value="Вывести на печать"/>
-	    <input type="button" id="btn2" value="Очистить"/>
-
-		
-	</ul>
+<div class="container2" id="container2" >
+	<button id="btn1">Вывести на печать</button>
+	<button id="btn2">Очистить</button>
 </div>
 </div>
 
-<div class="container3">
+<div class="container3" id="container3">
 	
-	<h1></h1>
-	<h2></h2>
-	<p style="white-space: pre-wrap;"></p>
+	
 	<img id="imgHidden" src=""  style="height: 50%;margin-left: 10px;display: none;">
 	
 </div>
@@ -55,61 +36,225 @@
 </body>
 	
 	<script>
-	 document.addEventListener('click', function(event) {
-    	let id = event.target.dataset.toggleId;
-    	if (!id) return;
+	
+var countH1 = 1;
+var countH2 = 1;
+var countText = 1;
+var countImg = 1;
+let object = new Object();
+var arr = [];
 
-    	let elem = document.getElementById(id);
+function changeFunc() {
+   var select = document.getElementById("selectBox").value;
 
-    	elem.hidden = !elem.hidden;
-  	});
+if (select == 1) {
+	var cont = document.getElementById("container2");
+  	var input = document.createElement('input');
+  	input.type = 'text';
+  	input.id = 'h1' + countH1;
+  	input.className ='h1' + countH1;
+  	input.placeholder = 'Введите заголовок 1 уровня';
+  	var closeButton = document.createElement('button');
+  	closeButton.id = 'close' + countH1;
+  	var div = document.createElement('div');
+  	div.style.display = "flex";
+  	div.id = 'divH1' + countH1;
+  	cont.appendChild(div);
+  	var divElem = document.getElementById("divH1"+countH1);
+  	divElem.appendChild(input);
+  	divElem.appendChild(closeButton);
+  	object = {
+  		key : "h1"
+  	};
+  	arr.push(object);
+  	countH1++;
+}
+if (select == 2) {
+	var cont = document.getElementById("container2");
+  	var input = document.createElement('input');
+  	input.type = 'text';
+  	input.id = 'h2' + countH2;
+  	input.className ='h2' + countH2;
+  	var closeButton = document.createElement('button');
+  	input.placeholder = 'Введите заголовок 2 уровня';
+  	closeButton.id = 'close' + countH1;
+  	var div = document.createElement('div');
+  	div.style.display = "flex";
+  	div.id = 'divH2' + countH2;
+  	cont.appendChild(div);
+  	var divElem = document.getElementById("divH2"+countH2);
+  	divElem.appendChild(input);
+  	divElem.appendChild(closeButton);
+  	object = {
+  		key : "h2"
+  	};
+  	arr.push(object);
+  	countH2++;
+}
+if (select == 3) {
+	var cont = document.getElementById("container2");
+  	var input = document.createElement('input');
+  	input.type = 'text';
+  	input.id = 'text' + countText;
+  	input.className ='text' + countText;
+  	input.placeholder = 'Введите текст';
+  	var closeButton = document.createElement('button');
+  	closeButton.id = 'close' + countText;
+  	var div = document.createElement('div');
+  	div.style.display = "flex";
+  	div.id = 'divText' + countText;
+  	cont.appendChild(div);
+  	var divElem = document.getElementById("divText"+countText);
+  	divElem.appendChild(input);
+  	divElem.appendChild(closeButton);
+  	object = {
+  		key : "text"
+  	};
+  	arr.push(object);
+  	countText++;
+}
+if (select == 4) {
+	var cont = document.getElementById("container2");
+  	var input = document.createElement('input');
+  	input.type = 'text';
+  	input.id = 'img' + countImg;
+  	input.className ='img' + countImg;
+  	input.placeholder = 'Введите ссылку на изображение';
+	var closeButton = document.createElement('button');
+  	closeButton.id = 'close' + countText;
+  	var div = document.createElement('div');
+  	div.style.display = "flex";
+  	div.id = 'divImg' + countImg;
+  	cont.appendChild(div);
+  	var divElem = document.getElementById("divImg"+countImg);
+  	divElem.appendChild(input);
+  	divElem.appendChild(closeButton);
+  	object = {
+  		key : "img"
+  	};
+  	arr.push(object);
+  	countImg++;
+}
+  
+}
 
-	function splitString(stringToSplit, separator) {
-  		return stringToSplit.split(separator);
-  	}
 
   	document.getElementById("btn2").onclick = function claer(){
-  		
-		document.getElementById("input_hhh").value = null;
-		document.getElementById("input_hh").value = null;
-		document.getElementById("input_text").value = null;
-		document.getElementById("input_img").value = null;
+  		var cont = document.getElementById("container3");
+		var h1Count = 1;
+		var h2Count = 1;
+		var textCount = 1;
+		var imgCount = 1;
+  		for (var i = 0; i < arr.length;i++) {
+	
+			if (arr[i].key == 'h1') {
+				removeForH1(h1Count);
+				h1Count++;
+			}
+			if (arr[i].key == 'h2') {
+				removeForH2(h2Count);
+				h2Count++;
+			}
+			if (arr[i].key == 'text') {
+				removeForText(textCount);
+				textCount++;
+			}	
+			if (arr[i].key == 'img') {
+				removeForImg(imgCount);
+				imgCount++;
+			}	
+			
+		}
+		
+  	}
 
-		document.querySelector('h1').textContent = "";
-		document.querySelector('h2').textContent = "";
-		document.querySelector('p').textContent = "";
-		document.querySelector('img').src = "";
-		document.getElementById('imgHidden').style.display = "none";
+  	function removeForH1(key)
+	{
+		var cont = document.getElementById("container2");
+  		document.getElementById("h1"+key).value = null;
+  		var nodes = document.querySelectorAll('.h1'+key);
+		cont.removeChild(nodes);
+  	}
+  	function removeForH2(key)
+	{
+  		var cont = document.getElementById("container2");
+  		document.getElementById("h2"+key).value = null;
+  		var nodes = document.querySelectorAll('.h2'+key);
+		cont.removeChild(nodes);
+  	}
+  	function removeForText(key)
+	{
+  		var cont = document.getElementById("container2");
+  		document.getElementById("text"+key).value = null;
+  		var nodes = document.querySelectorAll('.text'+key);
+		cont.removeChild(nodes);
+  	}
+  	function removeForImg(key)
+	{
+  		var cont = document.getElementById("container2");
+  		document.getElementById("img"+key).value = null;
+  		var nodes = document.querySelectorAll('.img'+key);
+		cont.removeChild(nodes);
+  	}
+
+  	function iteratorForH1(key){
+  		var cont = document.getElementById("container3");
+  			var param = document.getElementById("h1"+key).value;
+  			var h1 = document.createElement('h1');
+  			h1.innerHTML = param;
+  			cont.appendChild(h1);
+  	}
+  	function iteratorForH2(key){
+  		var cont = document.getElementById("container3");
+  			var param = document.getElementById("h2"+key).value;
+  			var h2 = document.createElement('h2');
+  			h2.innerHTML = param;
+  			cont.appendChild(h2);
+  	}
+  	function iteratorForText(key){
+  		var cont = document.getElementById("container3");
+  			var param = document.getElementById("text"+key).value;
+  			var p = document.createElement('p');
+  			p.innerHTML = param;
+  			cont.appendChild(p);
+  	}
+  	function iteratorForImg(key){
+  		var cont = document.getElementById("container3");
+  			var param = document.getElementById("img"+key).value;
+  			var img = document.createElement('img' + key);
+  			document.querySelector('img' + key).src = param;
+  			document.getElementById('img' + key).style.display = "block";
+  			cont.appendChild(img);
   	}
 
 	document.getElementById("btn1").onclick = function print(){
-
-		var paramhhh = document.getElementById("input_hhh").value;
-		var paramhh = document.getElementById("input_hh").value;
-		var paramtext = document.getElementById("input_text").value;
-		var paramimg = document.getElementById("input_img").value;
 		
-		var param1 = document.querySelector('h1');
-		var param2 = document.querySelector('h2');
-		var param3 = document.querySelector('p');
-
+		var cont = document.getElementById("container3");
+		var h1Count = 1;
+		var h2Count = 1;
+		var textCount = 1;
+		var imgCount = 1;
+		for (var i = 0; i < arr.length;i++) {
+	
+			if (arr[i].key == 'h1') {
+				iteratorForH1(h1Count);
+				h1Count++;
+			}
+			if (arr[i].key == 'h2') {
+				iteratorForH2(h2Count);
+				h2Count++;
+			}
+			if (arr[i].key == 'text') {
+				iteratorForText(textCount);
+				textCount++;
+			}	
+			if (arr[i].key == 'img') {
+				iteratorForImg(imgCount);
+				imgCount++;
+			}	
+			
+		}
 		
-		if (paramhhh != null) {
-			param1.textContent = paramhhh;
-		}
-		if (paramhh != null) {
-			param2.textContent = paramhh;
-		}		
-		if (paramtext != null) {
-			param3.textContent = paramtext;
-		}
-		if (paramimg != null) {
-			document.querySelector('img').src = paramimg;
-			document.getElementById('imgHidden').style.display = "block";
-		}
-		if (paramimg === "") {
-			document.getElementById('imgHidden').style.display = "none";
-		}
 		
 	}
 
