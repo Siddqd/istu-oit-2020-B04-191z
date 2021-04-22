@@ -1,0 +1,265 @@
+<html>
+  <head>
+  <title></title>
+  
+  <script type="text/javascript"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="main" style="display: flex;" >
+<div class="container1">
+	<select  id="selectBox" onchange="changeFunc();">
+		<option  value="">Добавить элемент</option>
+		<option  value="1">Заголовок первого уровня</option>
+		<option value="2">Заголовок второго уровня</option>
+		<option value="3">Текст</option>
+		<option value="4">Изображение</option>
+	</select>
+</div>
+
+
+<div class="container2" id="container2" >
+	<button id="btn1">Вывести на печать</button>
+	<button id="btn2">Очистить</button>
+</div>
+</div>
+
+<div class="container3" id="container3">
+	
+	
+	<img id="imgHidden" src=""  style="height: 50%;margin-left: 10px;display: none;">
+	
+</div>
+
+</body>
+	
+	<script>
+	
+var countH1 = 1;
+var countH2 = 1;
+var countText = 1;
+var countImg = 1;
+let object = new Object();
+var arr = [];
+
+function changeFunc() {
+   var select = document.getElementById("selectBox").value;
+
+if (select == 1) {
+	var cont = document.getElementById("container2");
+  	var input = document.createElement('input');
+  	input.type = 'text';
+  	input.id = 'h1' + countH1;
+  	input.className ='h1' + countH1;
+  	input.placeholder = 'Введите заголовок 1 уровня';
+  	var closeButton = document.createElement('button');
+  	closeButton.id = 'close' + countH1;
+  	var div = document.createElement('div');
+  	div.style.display = "flex";
+  	div.id = 'divH1' + countH1;
+  	cont.appendChild(div);
+  	var divElem = document.getElementById("divH1"+countH1);
+  	divElem.appendChild(input);
+  	divElem.appendChild(closeButton);
+  	object = {
+  		key : "h1"
+  	};
+  	arr.push(object);
+  	countH1++;
+}
+if (select == 2) {
+	var cont = document.getElementById("container2");
+  	var input = document.createElement('input');
+  	input.type = 'text';
+  	input.id = 'h2' + countH2;
+  	input.className ='h2' + countH2;
+  	var closeButton = document.createElement('button');
+  	input.placeholder = 'Введите заголовок 2 уровня';
+  	closeButton.id = 'close' + countH1;
+  	var div = document.createElement('div');
+  	div.style.display = "flex";
+  	div.id = 'divH2' + countH2;
+  	cont.appendChild(div);
+  	var divElem = document.getElementById("divH2"+countH2);
+  	divElem.appendChild(input);
+  	divElem.appendChild(closeButton);
+  	object = {
+  		key : "h2"
+  	};
+  	arr.push(object);
+  	countH2++;
+}
+if (select == 3) {
+	var cont = document.getElementById("container2");
+  	var input = document.createElement('input');
+  	input.type = 'text';
+  	input.id = 'text' + countText;
+  	input.className ='text' + countText;
+  	input.placeholder = 'Введите текст';
+  	var closeButton = document.createElement('button');
+  	closeButton.id = 'close' + countText;
+  	var div = document.createElement('div');
+  	div.style.display = "flex";
+  	div.id = 'divText' + countText;
+  	cont.appendChild(div);
+  	var divElem = document.getElementById("divText"+countText);
+  	divElem.appendChild(input);
+  	divElem.appendChild(closeButton);
+  	object = {
+  		key : "text"
+  	};
+  	arr.push(object);
+  	countText++;
+}
+if (select == 4) {
+	var cont = document.getElementById("container2");
+  	var input = document.createElement('input');
+  	input.type = 'text';
+  	input.id = 'img' + countImg;
+  	input.className ='img' + countImg;
+  	input.placeholder = 'Введите ссылку на изображение';
+	var closeButton = document.createElement('button');
+  	closeButton.id = 'close' + countText;
+  	var div = document.createElement('div');
+  	div.style.display = "flex";
+  	div.id = 'divImg' + countImg;
+  	cont.appendChild(div);
+  	var divElem = document.getElementById("divImg"+countImg);
+  	divElem.appendChild(input);
+  	divElem.appendChild(closeButton);
+  	object = {
+  		key : "img"
+  	};
+  	arr.push(object);
+  	countImg++;
+}
+  
+}
+
+
+  	document.getElementById("btn2").onclick = function claer(){
+  		var cont = document.getElementById("container3");
+		var h1Count = 1;
+		var h2Count = 1;
+		var textCount = 1;
+		var imgCount = 1;
+  		for (var i = 0; i < arr.length;i++) {
+	
+			if (arr[i].key == 'h1') {
+				removeForH1(h1Count);
+				h1Count++;
+			}
+			if (arr[i].key == 'h2') {
+				removeForH2(h2Count);
+				h2Count++;
+			}
+			if (arr[i].key == 'text') {
+				removeForText(textCount);
+				textCount++;
+			}	
+			if (arr[i].key == 'img') {
+				removeForImg(imgCount);
+				imgCount++;
+			}	
+			
+		}
+		
+  	}
+
+  	function removeForH1(key)
+	{
+		var cont = document.getElementById("container2");
+  		document.getElementById("h1"+key).value = null;
+  		var nodes = document.querySelectorAll('.h1'+key);
+		cont.removeChild(nodes);
+  	}
+  	function removeForH2(key)
+	{
+  		var cont = document.getElementById("container2");
+  		document.getElementById("h2"+key).value = null;
+  		var nodes = document.querySelectorAll('.h2'+key);
+		cont.removeChild(nodes);
+  	}
+  	function removeForText(key)
+	{
+  		var cont = document.getElementById("container2");
+  		document.getElementById("text"+key).value = null;
+  		var nodes = document.querySelectorAll('.text'+key);
+		cont.removeChild(nodes);
+  	}
+  	function removeForImg(key)
+	{
+  		var cont = document.getElementById("container2");
+  		document.getElementById("img"+key).value = null;
+  		var nodes = document.querySelectorAll('.img'+key);
+		cont.removeChild(nodes);
+  	}
+
+  	function iteratorForH1(key){
+  		var cont = document.getElementById("container3");
+  			var param = document.getElementById("h1"+key).value;
+  			var h1 = document.createElement('h1');
+  			h1.innerHTML = param;
+  			cont.appendChild(h1);
+  	}
+  	function iteratorForH2(key){
+  		var cont = document.getElementById("container3");
+  			var param = document.getElementById("h2"+key).value;
+  			var h2 = document.createElement('h2');
+  			h2.innerHTML = param;
+  			cont.appendChild(h2);
+  	}
+  	function iteratorForText(key){
+  		var cont = document.getElementById("container3");
+  			var param = document.getElementById("text"+key).value;
+  			var p = document.createElement('p');
+  			p.innerHTML = param;
+  			cont.appendChild(p);
+  	}
+  	function iteratorForImg(key){
+  		var cont = document.getElementById("container3");
+  			var param = document.getElementById("img"+key).value;
+  			var img = document.createElement('img' + key);
+  			document.querySelector('img' + key).src = param;
+  			document.getElementById('img' + key).style.display = "block";
+  			cont.appendChild(img);
+  	}
+
+	document.getElementById("btn1").onclick = function print(){
+		
+		var cont = document.getElementById("container3");
+		var h1Count = 1;
+		var h2Count = 1;
+		var textCount = 1;
+		var imgCount = 1;
+		for (var i = 0; i < arr.length;i++) {
+	
+			if (arr[i].key == 'h1') {
+				iteratorForH1(h1Count);
+				h1Count++;
+			}
+			if (arr[i].key == 'h2') {
+				iteratorForH2(h2Count);
+				h2Count++;
+			}
+			if (arr[i].key == 'text') {
+				iteratorForText(textCount);
+				textCount++;
+			}	
+			if (arr[i].key == 'img') {
+				iteratorForImg(imgCount);
+				imgCount++;
+			}	
+			
+		}
+		
+		
+	}
+
+
+
+	</script>
+
+</html>
