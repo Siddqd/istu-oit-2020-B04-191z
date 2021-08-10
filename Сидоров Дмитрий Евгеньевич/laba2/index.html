@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FOTOSHOP 3000</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script type="text/javascript" src="jquery-3.3.1.min.js"></script>-->
+
+</head>
+
+<body>
+    <div id="header">
+        <h1>IMAGE SETTER</h1>
+    </div>
+    <div id="main">
+        <form id="menu" action="formdata" method="POST" name="form1">
+            <div class="option-list">
+
+                <div class="inbl wh">
+                    <div class="bl">width :<span> </span> </div>
+                    <div class="bl">height:<span> </span> </div>
+                </div>
+
+                <div id="op1" class="inbl option">
+                    <p>Черно-белое</p>
+                    <div id="X1" class="X">
+                        X
+                    </div>
+                </div>
+                <div id="op2" class="option inbl">
+                    <p>Отразить по вертикали</p>
+                    <div id="X2" class="X">
+                        X
+                    </div>
+                </div>
+                <div id="op3" class="option inbl">
+                    <p>Отразить по горизонтали</p>
+                    <div id="X3" class="X">
+                        X
+                    </div>
+                </div>
+                <div id="op4" class="option inbl">
+                    <p>Поворот на 90 гр влево</p>
+                    <div id="X4" class="X">
+                        X
+                    </div>
+                </div>
+                <div class="option inbl" id="op5">
+                    <p>Поворот на 90 гр вправо</p>
+                    <div id="X5" class="X">
+                        X
+                    </div>
+                </div>
+                <div id="op6" class="inbl option">
+                    <p id="form_show">Бинаризация %</p>
+                    <div id="X6" class="X">
+                        X
+                    </div>
+                    <input type="range" id="binary-level" name="binary-level" min="0" max="100" value="0" step="1">
+                    <label for="binary-level">binary-level</label>
+                </div>
+                <p> Добавить фильтр : <br>
+                    <select id="list1" name="list1">
+                    <option value = "0" selected></option>
+                    <option value = "1">Черно-белое</option>
+                    <option value = "2">Отразить по вертикали</option>
+                    <option value = "3">Отразить по горизонтали</option>
+                    <option value = "4">Поворот на 90 град влево</option>
+                    <option value = "5">Поворот на 90 град вправо</option>
+                    <option value = "6">Бинаризация по порогу</option>
+                </select></p>
+                <!--<p><input type="submit" value="Применить"></p>-->
+        </form>
+
+        <form id="upload-container" method="POST" action="send.php">
+
+            <div>
+                <input id="file-input" type="file" name="file" alt = "See no imagE" accept="image/png,image/jpeg">
+                <label for="file-input">Выберите файл</label>
+                <span><br>или перетащите его сюда</span>
+            </div>
+
+        </form>
+        <div id="divimg">
+            <img src="" id="fullimg">
+        </div>
+        </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
